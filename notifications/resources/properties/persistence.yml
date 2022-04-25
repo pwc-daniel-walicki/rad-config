@@ -1,0 +1,44 @@
+spring.liquibase.change-log: classpath:db/changelog/liquibase-changelog.xml
+
+---
+
+spring:
+  config.activate.on-profile: 'dev | qa | stage | prod'
+  datasource:
+    url: jdbc:sqlserver://${app.db.host};databaseName=${app.db.name}
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: ${app.db.username}
+    password: ${app.db.password}
+
+---
+
+spring:
+  config.activate.on-profile: 'dev'
+
+app.db:
+  host: radmfesql.68206e8e3afc.database.windows.net
+  name: RadDevNotifications
+  username: ${rad.app.dev.db.username}
+  password: ${rad.app.dev.db.password}
+
+---
+
+spring:
+  config.activate.on-profile: 'qa'
+
+app.db:
+  host: radmfesql.68206e8e3afc.database.windows.net
+  name: RadQaNotifications
+  username: ${rad.app.qa.db.username}
+  password: ${rad.app.qa.db.password}
+
+---
+
+spring:
+  config.activate.on-profile: 'stage'
+
+app.db:
+  host: GX-ZU2SQLSWV414.glblcloud.ad.pwcinternal.com\EID1371S001_01:14330
+  name: RadStageNotifications
+  username: ${rad.app.notifications.stage.db.username}
+  password: ${rad.app.notifications.stage.db.password}

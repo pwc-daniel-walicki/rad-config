@@ -1,0 +1,29 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <changeSet id="01" author="igor.paprzycki@pwc.com">
+    <validCheckSum>ANY</validCheckSum>
+
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="sender"/>
+      </not>
+    </preConditions>
+
+    <createTable tableName="sender">
+      <column name="entity_id" type="INT" autoIncrement="true" incrementBy="1" startWith="1">
+        <constraints nullable="false"
+          unique="true"
+          primaryKey="true"
+          primaryKeyName="pk_sender_entity_id"/>
+      </column>
+
+      <column name="sender_id" type="VARCHAR(100)">
+        <constraints nullable="false"/>
+      </column>
+    </createTable>
+  </changeSet>
+</databaseChangeLog>

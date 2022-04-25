@@ -1,0 +1,5 @@
+spring:
+  security.user:
+    name: client
+    password: client
+token-validation-url: https://signin.test.access.pwc.com/openam/oauth2/realms/venturessso/tokeninfo?access_token={token}

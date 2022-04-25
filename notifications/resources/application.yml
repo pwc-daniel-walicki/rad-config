@@ -1,0 +1,16 @@
+spring:
+  profiles.active: unsecured
+  application.name: The RAD Notifications microservice - ${spring.profiles.active}
+  config:
+    import:
+      - classpath:properties/context-path.yml
+      - classpath:properties/cors.yml
+      - classpath:properties/kubernetes.yml
+      - classpath:properties/logging.yml
+      - classpath:properties/persistence.yml
+      - classpath:properties/persistence-local.yml
+      - classpath:properties/retry.yml
+      - classpath:properties/security.yml
+      - classpath:properties/swagger.yml
+
+server.port: 8080

@@ -1,0 +1,28 @@
+springdoc:
+  swagger-ui.enabled: false
+  api-docs.enabled: false
+
+---
+
+spring.config.activate.on-profile: '!prod'
+
+springdoc:
+  version: v0.3.0
+  swagger-ui:
+    enabled: true
+    operations-sorter: method
+    disable-swagger-default-url: true
+    syntax-highlight:
+      activated: true
+      theme: tomorrow-night  # agate arta monokai nord obsidian tomorrow-night
+    display-request-duration: true
+    filter: false
+    tags-sorter: alpha
+  cache.disabled: true
+  auto-tag-classes: false
+  writer-with-default-pretty-printer: true
+  api-docs:
+    enabled: true
+    groups.enabled: false
+  override-with-generic-response: true
+  default-produces-media-type: application/json

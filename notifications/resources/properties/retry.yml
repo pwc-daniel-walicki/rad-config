@@ -1,0 +1,3 @@
+app.retry:
+  maxAttempts: 3
+  backOffDelay: 100

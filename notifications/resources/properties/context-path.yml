@@ -1,0 +1,7 @@
+spring.config.activate.on-profile: 'dev | stage | prod'
+server.servlet.context-path: /rad-ms-notifications
+
+---
+
+spring.config.activate.on-profile: 'qa'
+server.servlet.context-path: /rad-ms-notifications-qa

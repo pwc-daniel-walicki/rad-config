@@ -1,0 +1,4 @@
+app.cors:
+  - path-patterns: /notifications/**
+    allowed-origin-patterns: http://localhost:*/, https://*.pwc.com/, https://*.pwcinternal.com/
+    allowed-methods: GET, HEAD, POST, PATCH, DELETE, OPTIONS
