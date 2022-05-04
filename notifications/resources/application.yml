@@ -1,6 +1,6 @@
 spring:
-  profiles.active: 
-  application.name: The RAD Notifications microservice - ${spring.profiles.active}
+  profiles.active: local
+  # application.name: The RAD Notifications microservice - ${spring.profiles.active}
   config:
     import:
       - classpath:properties/context-path.yml
