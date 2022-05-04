@@ -1,5 +1,5 @@
 spring:
-  profiles.active: unsecured
+  profiles.active: 
   application.name: The RAD Notifications microservice - ${spring.profiles.active}
   config:
     import:
