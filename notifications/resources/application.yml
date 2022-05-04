@@ -3,14 +3,14 @@ spring:
   # application.name: The RAD Notifications microservice - ${spring.profiles.active}
   config:
     import:
-      - classpath:properties/context-path.yml
-      - classpath:properties/cors.yml
-      - classpath:properties/kubernetes.yml
-      - classpath:properties/logging.yml
-      - classpath:properties/persistence.yml
-      - classpath:properties/persistence-local.yml
-      - classpath:properties/retry.yml
-      - classpath:properties/security.yml
-      - classpath:properties/swagger.yml
+      - classpath:context-path.yml
+      - classpath:cors.yml
+      - classpath:kubernetes.yml
+      - classpath:logging.yml
+      - classpath:persistence.yml
+      - classpath:persistence-local.yml
+      - classpath:retry.yml
+      - classpath:security.yml
+      - classpath:swagger.yml
 
 server.port: 8081
