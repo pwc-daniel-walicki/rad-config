@@ -13,4 +13,4 @@ spring:
       - classpath:properties/security.yml
       - classpath:properties/swagger.yml
 
-server.port: 8080
+server.port: 8081
