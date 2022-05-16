@@ -2,5 +2,5 @@ config.value: rad-config main branch check
 spring:
   cloud:
     vault:
-      token: hvs.GxkmGH1dbJLQiNA8UOcRkVK8
+      token: hvs.cfGH9EB8nTrtsRSiLPxrEphj
       uri: http://127.0.0.1:8200
