@@ -16,14 +16,6 @@ config.value: clientPOC_2 default
 
 spring:
   config.activate.on-profile: dev
-  datasource:
-    username: clientPOC_2-dev
-    url: jdbc:h2:mem:data;DATABASE_TO_LOWER=TRUE
-    driverClassName: org.h2.Driver
-  h2:
-    console:
-      enabled: true
-      settings.web-allow-others: true
 
 server.port: 8089
 management.endpoints.web.exposure.include: "*"
