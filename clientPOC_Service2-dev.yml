@@ -1,7 +1,7 @@
 spring:
-  config.activate.on-profile: dev
+  config.activate.on-profile: qa
   datasource:
-    username: dev
+    username: qa1
     url: jdbc:h2:mem:data;DATABASE_TO_LOWER=TRUE
     driverClassName: org.h2.Driver
   h2:
@@ -9,7 +9,7 @@ spring:
       enabled: true
       settings.web-allow-others: true
 
-server.port: 8088
+server.port: 8089
 management.endpoints.web.exposure.include: "*"
-config.value: dev file
+config.value: qa1 file
 
