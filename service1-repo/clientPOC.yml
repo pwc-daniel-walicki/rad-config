@@ -1,0 +1,47 @@
+spring:
+  datasource:
+    username: clientPOCsub
+    url: jdbc:h2:mem:data;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings.web-allow-others: true
+
+server.port: 8088
+management.endpoints.web.exposure.include: "*"
+config.value: clientPOC default subfolder
+
+---
+
+spring:
+  config.activate.on-profile: dev
+  datasource:
+    username: clientPOC-dev-sub
+    url: jdbc:h2:mem:data;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings.web-allow-others: true
+
+server.port: 8088
+management.endpoints.web.exposure.include: "*"
+config.value: clientPOC dev subfolder
+
+---
+
+spring:
+  config.activate.on-profile: qa
+  datasource:
+    username: clientPOC-qa-sub
+    url: jdbc:h2:mem:data;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings.web-allow-others: true
+
+server.port: 8088
+management.endpoints.web.exposure.include: "*"
+config.value: clientPOC qa subfolder
