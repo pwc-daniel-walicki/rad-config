@@ -1,6 +1,47 @@
-config.value: rad-config main branch check
 spring:
-  cloud:
-    vault:
-      token: hvs.cfGH9EB8nTrtsRSiLPxrEphj
-      uri: http://127.0.0.1:8200
+  datasource:
+    username: default
+    url: jdbc:h2:mem:data;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings.web-allow-others: true
+
+server.port: 8088
+management.endpoints.web.exposure.include: "*"
+config.value: rad-config default
+
+---
+
+spring:
+  config.activate.on-profile: dev
+  datasource:
+    username: rad-dev
+    url: jdbc:h2:mem:data;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings.web-allow-others: true
+
+server.port: 8088
+management.endpoints.web.exposure.include: "*"
+config.value: rad-config dev
+
+---
+
+spring:
+  config.activate.on-profile: qa
+  datasource:
+    username: rad-qa
+    url: jdbc:h2:mem:data;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings.web-allow-others: true
+
+server.port: 8088
+management.endpoints.web.exposure.include: "*"
+config.value: rad-config qa
